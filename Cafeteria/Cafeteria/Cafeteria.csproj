@@ -52,6 +52,12 @@
     <Compile Include="Alta_Producto.Designer.cs">
       <DependentUpon>Alta_Producto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta_Producto.Designer.cs">
+      <DependentUpon>Consulta_Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Alta_Producto.resx">
       <DependentUpon>Alta_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta_Producto.resx">
+      <DependentUpon>Consulta_Producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
