@@ -31,8 +31,8 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblPass = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -68,19 +68,19 @@
             this.lblPass.TabIndex = 2;
             this.lblPass.Text = "Contraseña:";
             // 
-            // textBox1
+            // txtPass
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 92);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtPass.Location = new System.Drawing.Point(274, 92);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(169, 20);
+            this.txtPass.TabIndex = 3;
             // 
-            // textBox2
+            // txtNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(274, 54);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtNombre.Location = new System.Drawing.Point(274, 54);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(169, 20);
+            this.txtNombre.TabIndex = 4;
             // 
             // textBox3
             // 
@@ -96,8 +96,8 @@
             this.BackgroundImage = global::Cafeteria.Properties.Resources.fondo;
             this.ClientSize = new System.Drawing.Size(466, 232);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnAceptar);
@@ -114,8 +114,8 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblPass;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox textBox3;
     }
 }
