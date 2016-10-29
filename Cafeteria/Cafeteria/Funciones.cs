@@ -62,5 +62,55 @@ namespace Cafeteria
             conexion.Close();
             return _lista;
         }
+
+        public static int Modificar_Producto(Materia_Prima mat_prim)
+        {
+            int retorno = 0;
+            MySqlConnection conexion = Conexion.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Update materia_prima set producto='{0}', cantidad={1}, precio={2}, stock={3} where id_materia={4}",
+                mat_prim.producto, mat_prim.cantidad, mat_prim.precio, mat_prim.stock, mat_prim.id_materia), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+
+            return retorno;
+
+
+        }
+
+        public static Materia_Prima Obtener_Producto(int id_materia)
+        {
+            Materia_Prima mat_prim = new Materia_Prima();
+            MySqlConnection conexion = Conexion.ObtenerConexion();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT id_materia, producto, cantidad, precio, stock FROM materia_prima WHERE id_materia = '{0}'", id_materia), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                mat_prim.id_materia = _reader.GetInt32(0);
+                mat_prim.producto = _reader.GetString(1);
+                mat_prim.cantidad = _reader.GetFloat(2);
+                mat_prim.precio = _reader.GetFloat(3);
+                mat_prim.stock = _reader.GetFloat(4);
+            }
+
+            conexion.Close();
+            return mat_prim;
+        }
+
+        public static int Baja_Producto(int id_materia)
+        {
+            int retorno = 0;
+            MySqlConnection conexion = Conexion.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Delete From materia_prima where id_materia={0}", id_materia), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+
+            return retorno;
+
+        }
     }
 }
