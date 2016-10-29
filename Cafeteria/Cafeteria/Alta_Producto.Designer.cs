@@ -47,7 +47,7 @@
             this.lblProducto.Location = new System.Drawing.Point(99, 27);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(93, 21);
-            this.lblProducto.TabIndex = 0;
+            this.lblProducto.TabIndex = 7;
             this.lblProducto.Text = "Producto:";
             // 
             // lblCantidad
@@ -57,7 +57,7 @@
             this.lblCantidad.Location = new System.Drawing.Point(101, 71);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(91, 21);
-            this.lblCantidad.TabIndex = 1;
+            this.lblCantidad.TabIndex = 8;
             this.lblCantidad.Text = "Cantidad:";
             // 
             // lblPrecio
@@ -67,7 +67,7 @@
             this.lblPrecio.Location = new System.Drawing.Point(121, 124);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(71, 21);
-            this.lblPrecio.TabIndex = 2;
+            this.lblPrecio.TabIndex = 9;
             this.lblPrecio.Text = "Precio:";
             // 
             // lblStock
@@ -77,7 +77,7 @@
             this.lblStock.Location = new System.Drawing.Point(56, 179);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(136, 21);
-            this.lblStock.TabIndex = 3;
+            this.lblStock.TabIndex = 10;
             this.lblStock.Text = "Stock Mínimo:";
             // 
             // txtStock
@@ -92,21 +92,21 @@
             this.txtPrecio.Location = new System.Drawing.Point(211, 124);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(98, 20);
-            this.txtPrecio.TabIndex = 5;
+            this.txtPrecio.TabIndex = 3;
             // 
             // txtCantidad
             // 
             this.txtCantidad.Location = new System.Drawing.Point(211, 71);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(98, 20);
-            this.txtCantidad.TabIndex = 6;
+            this.txtCantidad.TabIndex = 1;
             // 
             // txtProducto
             // 
             this.txtProducto.Location = new System.Drawing.Point(211, 27);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(195, 20);
-            this.txtProducto.TabIndex = 7;
+            this.txtProducto.TabIndex = 0;
             // 
             // btnAgregar
             // 
@@ -116,17 +116,26 @@
             this.btnAgregar.Location = new System.Drawing.Point(240, 236);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(135, 47);
-            this.btnAgregar.TabIndex = 8;
+            this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // cmbUnidades
             // 
             this.cmbUnidades.FormattingEnabled = true;
+            this.cmbUnidades.Items.AddRange(new object[] {
+            "g",
+            "kg",
+            "ml",
+            "litros",
+            "oz",
+            "pz"});
             this.cmbUnidades.Location = new System.Drawing.Point(319, 71);
             this.cmbUnidades.Name = "cmbUnidades";
             this.cmbUnidades.Size = new System.Drawing.Size(87, 21);
-            this.cmbUnidades.TabIndex = 9;
+            this.cmbUnidades.TabIndex = 2;
+            this.cmbUnidades.Text = "Unidades";
             // 
             // Alta_Producto
             // 

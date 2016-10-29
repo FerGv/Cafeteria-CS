@@ -45,6 +45,7 @@
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar Producto";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnConsultar
             // 
@@ -57,6 +58,7 @@
             this.btnConsultar.TabIndex = 1;
             this.btnConsultar.Text = "Consultar Producto";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnReporte
             // 
@@ -69,6 +71,7 @@
             this.btnReporte.TabIndex = 2;
             this.btnReporte.Text = "Reporte Productos";
             this.btnReporte.UseVisualStyleBackColor = false;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnSalir
             // 
@@ -81,6 +84,7 @@
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Menu
             // 

@@ -36,7 +36,7 @@ namespace Cafeteria
                         MessageBox.Show("Bienvenido");
                         Menu menu = new Menu();
                         menu.Show();
-                        Close();
+                        Hide();
                     }
                     else
                         MessageBox.Show("Datos incorrectos");

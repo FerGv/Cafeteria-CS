@@ -44,7 +44,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(289, 176);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(133, 44);
-            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -56,7 +56,7 @@
             this.lblNombre.Location = new System.Drawing.Point(162, 54);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(81, 21);
-            this.lblNombre.TabIndex = 1;
+            this.lblNombre.TabIndex = 4;
             this.lblNombre.Text = "Nombre:";
             // 
             // lblPass
@@ -66,7 +66,7 @@
             this.lblPass.Location = new System.Drawing.Point(162, 89);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(110, 21);
-            this.lblPass.TabIndex = 2;
+            this.lblPass.TabIndex = 5;
             this.lblPass.Text = "Contraseña:";
             // 
             // txtPass
@@ -74,14 +74,14 @@
             this.txtPass.Location = new System.Drawing.Point(274, 92);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(169, 20);
-            this.txtPass.TabIndex = 3;
+            this.txtPass.TabIndex = 2;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(274, 54);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(169, 20);
-            this.txtNombre.TabIndex = 4;
+            this.txtNombre.TabIndex = 0;
             // 
             // textBox3
             // 

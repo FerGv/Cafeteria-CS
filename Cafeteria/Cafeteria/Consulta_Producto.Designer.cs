@@ -47,7 +47,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(26, 213);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(120, 36);
-            this.btnEliminar.TabIndex = 0;
+            this.btnEliminar.TabIndex = 3;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
@@ -59,7 +59,7 @@
             this.btnModificar.Location = new System.Drawing.Point(152, 214);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(120, 36);
-            this.btnModificar.TabIndex = 1;
+            this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             // 
@@ -71,7 +71,7 @@
             this.btnRegresar.Location = new System.Drawing.Point(426, 214);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(120, 36);
-            this.btnRegresar.TabIndex = 2;
+            this.btnRegresar.TabIndex = 5;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
             // 
@@ -83,7 +83,7 @@
             this.btnSalir.Location = new System.Drawing.Point(552, 213);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(120, 36);
-            this.btnSalir.TabIndex = 3;
+            this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             // 
@@ -94,7 +94,7 @@
             this.lblProducto.Location = new System.Drawing.Point(136, 24);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(93, 21);
-            this.lblProducto.TabIndex = 4;
+            this.lblProducto.TabIndex = 7;
             this.lblProducto.Text = "Producto:";
             // 
             // txtProducto
@@ -102,7 +102,7 @@
             this.txtProducto.Location = new System.Drawing.Point(235, 27);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(265, 20);
-            this.txtProducto.TabIndex = 5;
+            this.txtProducto.TabIndex = 0;
             // 
             // btnBuscar
             // 
@@ -112,7 +112,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(506, 20);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(81, 31);
-            this.btnBuscar.TabIndex = 6;
+            this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
@@ -123,7 +123,7 @@
             this.dgvProducto.Location = new System.Drawing.Point(26, 138);
             this.dgvProducto.Name = "dgvProducto";
             this.dgvProducto.Size = new System.Drawing.Size(646, 47);
-            this.dgvProducto.TabIndex = 7;
+            this.dgvProducto.TabIndex = 2;
             // 
             // Consulta_Producto
             // 
