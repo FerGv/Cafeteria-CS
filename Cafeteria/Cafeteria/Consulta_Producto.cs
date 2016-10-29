@@ -70,9 +70,20 @@ namespace Cafeteria
                 MessageBox.Show("Por favor selecciona la fila del producto.");
         }
 
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            if (dgvProducto.SelectedRows.Count == 1)
+            {
+                int id = Convert.ToInt32(dgvProducto.CurrentRow.Cells[0].Value);
+                mat_prim_seleccionada = Funciones.Obtener_Producto(id);
 
+                Modificar_Producto modificar = new Modificar_Producto(mat_prim_seleccionada);
+                modificar.Show();
+                Close();
+            }
+            else
+                MessageBox.Show("Por favor selecciona la fila del producto.");
         }
     }
 }
