@@ -16,5 +16,25 @@ namespace Cafeteria
         {
             InitializeComponent();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            Close();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            dgvProducto.DataSource = Funciones.Consulta_Producto(txtProducto.Text);
+
+            if (dgvProducto.RowCount == 0)
+                MessageBox.Show("Producto No encontrado");
+        }
     }
 }

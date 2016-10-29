@@ -39,5 +39,28 @@ namespace Cafeteria
             conexion.Close();
             return retorno;
         }
+
+        public static List<Materia_Prima> Consulta_Producto(string Producto)
+        {
+            List<Materia_Prima> _lista = new List<Materia_Prima>();
+            MySqlConnection conexion = Conexion.ObtenerConexion();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT id_materia, producto, cantidad, precio, stock FROM materia_prima WHERE producto = '{0}'", Producto), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                Materia_Prima mat_prim = new Materia_Prima();
+                mat_prim.id_materia = _reader.GetInt32(0);
+                mat_prim.producto = _reader.GetString(1);
+                mat_prim.cantidad = _reader.GetFloat(2);
+                mat_prim.precio = _reader.GetFloat(3);
+                mat_prim.stock = _reader.GetFloat(4);
+
+                _lista.Add(mat_prim);
+            }
+
+            conexion.Close();
+            return _lista;
+        }
     }
 }

@@ -74,6 +74,7 @@
             this.btnRegresar.TabIndex = 5;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = false;
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // btnSalir
             // 
@@ -86,6 +87,7 @@
             this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // lblProducto
             // 
@@ -115,11 +117,13 @@
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dgvProducto
             // 
             this.dgvProducto.BackgroundColor = System.Drawing.Color.Tan;
             this.dgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducto.GridColor = System.Drawing.Color.Chocolate;
             this.dgvProducto.Location = new System.Drawing.Point(26, 138);
             this.dgvProducto.Name = "dgvProducto";
             this.dgvProducto.Size = new System.Drawing.Size(646, 47);
