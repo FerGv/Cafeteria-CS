@@ -33,7 +33,9 @@ namespace Cafeteria
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            Reporte_Productos reporte = new Reporte_Productos();
+            List<Materia_Prima> mp = new List<Materia_Prima>();
+            mp = Funciones.Reporte_Productos();
+            Reporte_Productos reporte = new Reporte_Productos(mp);
             reporte.Show();
             Close();
         }

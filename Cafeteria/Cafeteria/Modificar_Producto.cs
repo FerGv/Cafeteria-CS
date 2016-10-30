@@ -43,8 +43,6 @@ namespace Cafeteria
                 MessageBox.Show("No se pudo actualizar", "Error al Actualizar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
-            Menu menu = new Menu();
-            menu.Show();
             Close();
         }
     }
