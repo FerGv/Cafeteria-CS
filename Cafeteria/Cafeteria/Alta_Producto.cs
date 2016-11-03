@@ -42,6 +42,7 @@ namespace Cafeteria
                                 Materia_Prima mat_prim = new Materia_Prima();
                                 mat_prim.producto = txtProducto.Text;
                                 mat_prim.cantidad = float.Parse(txtCantidad.Text);
+                                mat_prim.unidad = cmbUnidades.SelectedItem.ToString();
                                 mat_prim.precio = float.Parse(txtPrecio.Text);
                                 mat_prim.stock = float.Parse(txtStock.Text);
 

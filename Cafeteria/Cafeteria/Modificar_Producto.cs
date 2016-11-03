@@ -20,8 +20,11 @@ namespace Cafeteria
             this.mp = mat_prim;
             txtProducto.Text = mp.producto;
             txtCantidad.Text = mp.cantidad.ToString();
+            cmbUnidades.Text = mp.unidad;
             txtPrecio.Text = mp.precio.ToString();
             txtStock.Text = mp.stock.ToString();
+            
+            //MessageBox.Show(valor);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -30,13 +33,14 @@ namespace Cafeteria
 
             mat_prim.producto = txtProducto.Text.Trim();
             mat_prim.cantidad = float.Parse(txtCantidad.Text);
+            mat_prim.unidad = cmbUnidades.SelectedItem.ToString();
             mat_prim.precio = float.Parse(txtPrecio.Text);
             mat_prim.stock = float.Parse(txtStock.Text);
             mat_prim.id_materia = mp.id_materia;
 
             if (Funciones.Modificar_Producto(mat_prim) > 0)
             {
-                MessageBox.Show("Los datos del cliente se actualizaron", "Datos Actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Los datos del producto se actualizaron", "Datos Actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

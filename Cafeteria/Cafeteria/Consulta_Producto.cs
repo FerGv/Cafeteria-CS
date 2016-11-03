@@ -37,8 +37,6 @@ namespace Cafeteria
                 MessageBox.Show("Producto No encontrado");
         }
 
-
-
         Materia_Prima mat_prim_seleccionada;
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -50,7 +48,7 @@ namespace Cafeteria
 
                 if (MessageBox.Show("¿Seguro que desea eliminar el producto actual?", "Eliminar Producto", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (Funciones.Baja_Producto(mat_prim_seleccionada.id_materia) > 0)
+                    if (Funciones.Baja_Producto(id) > 0)
                     {
                         MessageBox.Show("Producto Eliminado Correctamente", "Producto Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -69,7 +67,6 @@ namespace Cafeteria
             else
                 MessageBox.Show("Por favor selecciona la fila del producto.");
         }
-
 
         private void btnModificar_Click(object sender, EventArgs e)
         {

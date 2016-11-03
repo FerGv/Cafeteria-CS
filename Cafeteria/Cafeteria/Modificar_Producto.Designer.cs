@@ -124,6 +124,13 @@
             // cmbUnidades
             // 
             this.cmbUnidades.FormattingEnabled = true;
+            this.cmbUnidades.Items.AddRange(new object[] {
+            "g",
+            "kg",
+            "ml",
+            "litros",
+            "oz",
+            "pz"});
             this.cmbUnidades.Location = new System.Drawing.Point(319, 71);
             this.cmbUnidades.Name = "cmbUnidades";
             this.cmbUnidades.Size = new System.Drawing.Size(87, 21);
