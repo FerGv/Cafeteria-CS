@@ -43,5 +43,32 @@ namespace Cafeteria
                 }
             }
         }
+
+        private void lnkUsuarios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (txtNombre.Text == "")
+                MessageBox.Show("Debes llenar el nombre");
+            else
+            {
+                if (txtPass.Text == "")
+                    MessageBox.Show("Debes llenar la contraseña");
+                else
+                {
+                    user = Funciones.Consulta_Usuario(txtNombre.Text, txtPass.Text);
+
+                    if ((user.usuario == txtNombre.Text) && (user.pass == txtPass.Text))
+                    {
+                        MessageBox.Show("Bienvenido");
+                        List<Usuario> users = new List<Usuario>();
+                        users = Funciones.Reporte_Usuarios();
+                        Usuarios user = new Usuarios(users);
+                        user.Show(this);
+                        Hide();
+                    }
+                    else
+                        MessageBox.Show("Datos incorrectos");
+                }
+            }
+        }
     }
 }

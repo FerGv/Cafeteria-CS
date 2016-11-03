@@ -34,6 +34,7 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lnkUsuarios = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -90,12 +91,24 @@
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 5;
             // 
+            // lnkUsuarios
+            // 
+            this.lnkUsuarios.AutoSize = true;
+            this.lnkUsuarios.Location = new System.Drawing.Point(12, 210);
+            this.lnkUsuarios.Name = "lnkUsuarios";
+            this.lnkUsuarios.Size = new System.Drawing.Size(119, 13);
+            this.lnkUsuarios.TabIndex = 6;
+            this.lnkUsuarios.TabStop = true;
+            this.lnkUsuarios.Text = "Administración Usuarios";
+            this.lnkUsuarios.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkUsuarios_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Cafeteria.Properties.Resources.fondo;
             this.ClientSize = new System.Drawing.Size(466, 232);
+            this.Controls.Add(this.lnkUsuarios);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtPass);
@@ -118,6 +131,7 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.LinkLabel lnkUsuarios;
     }
 }
 

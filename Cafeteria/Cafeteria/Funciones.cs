@@ -27,6 +27,27 @@ namespace Cafeteria
             return usuario_login;
         }
 
+        public static List<Usuario> Reporte_Usuarios()
+        {
+            List<Usuario> _lista = new List<Usuario>();
+            MySqlConnection conexion = Conexion.ObtenerConexion();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT id_usuario, usuario, pass FROM usuarios"), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                Usuario user = new Usuario();
+                user.id_usuario = _reader.GetInt32(0);
+                user.usuario = _reader.GetString(1);
+                user.pass = _reader.GetString(2);
+
+                _lista.Add(user);
+            }
+
+            conexion.Close();
+            return _lista;
+        }
+
         public static int Agregar_Producto(Materia_Prima mat_prim)
         {
             int retorno = 0;
