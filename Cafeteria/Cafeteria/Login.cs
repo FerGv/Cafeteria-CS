@@ -44,7 +44,7 @@ namespace Cafeteria
             }
         }
 
-        private void lnkUsuarios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void btnAdministrar_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text == "")
                 MessageBox.Show("Debes llenar el nombre");
@@ -56,7 +56,7 @@ namespace Cafeteria
                 {
                     user = Funciones.Consulta_Usuario(txtNombre.Text, txtPass.Text);
 
-                    if ((user.usuario == txtNombre.Text) && (user.pass == txtPass.Text))
+                    if (user.id_usuario == 1)
                     {
                         MessageBox.Show("Bienvenido");
                         List<Usuario> users = new List<Usuario>();

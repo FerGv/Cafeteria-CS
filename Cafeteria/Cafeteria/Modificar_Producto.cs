@@ -23,8 +23,6 @@ namespace Cafeteria
             cmbUnidades.Text = mp.unidad;
             txtPrecio.Text = mp.precio.ToString();
             txtStock.Text = mp.stock.ToString();
-            
-            //MessageBox.Show(valor);
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

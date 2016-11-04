@@ -47,7 +47,7 @@ namespace Cafeteria
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo eliminar el producto", "Prodcuto No Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("No se pudo eliminar el producto", "Producto No Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
 
                     List<Materia_Prima> mp = new List<Materia_Prima>();
@@ -57,7 +57,7 @@ namespace Cafeteria
                     Close();
                 }
                 else
-                    MessageBox.Show("Se canceló la eliminación", "Eliminacion Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                
+                    MessageBox.Show("Se canceló la eliminación", "Eliminación Cancelada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                
             }
             else
                 MessageBox.Show("Por favor selecciona la fila del producto.");

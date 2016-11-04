@@ -33,8 +33,7 @@
             this.lblPass = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lnkUsuarios = new System.Windows.Forms.LinkLabel();
+            this.btnAdministrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -84,23 +83,18 @@
             this.txtNombre.Size = new System.Drawing.Size(169, 20);
             this.txtNombre.TabIndex = 0;
             // 
-            // textBox3
+            // btnAdministrar
             // 
-            this.textBox3.Location = new System.Drawing.Point(371, 254);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // lnkUsuarios
-            // 
-            this.lnkUsuarios.AutoSize = true;
-            this.lnkUsuarios.Location = new System.Drawing.Point(12, 210);
-            this.lnkUsuarios.Name = "lnkUsuarios";
-            this.lnkUsuarios.Size = new System.Drawing.Size(119, 13);
-            this.lnkUsuarios.TabIndex = 6;
-            this.lnkUsuarios.TabStop = true;
-            this.lnkUsuarios.Text = "Administración Usuarios";
-            this.lnkUsuarios.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkUsuarios_LinkClicked);
+            this.btnAdministrar.BackColor = System.Drawing.Color.Coral;
+            this.btnAdministrar.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdministrar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAdministrar.Location = new System.Drawing.Point(12, 188);
+            this.btnAdministrar.Name = "btnAdministrar";
+            this.btnAdministrar.Size = new System.Drawing.Size(136, 32);
+            this.btnAdministrar.TabIndex = 6;
+            this.btnAdministrar.Text = "Administrar Usuarios";
+            this.btnAdministrar.UseVisualStyleBackColor = false;
+            this.btnAdministrar.Click += new System.EventHandler(this.btnAdministrar_Click);
             // 
             // Login
             // 
@@ -108,8 +102,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Cafeteria.Properties.Resources.fondo;
             this.ClientSize = new System.Drawing.Size(466, 232);
-            this.Controls.Add(this.lnkUsuarios);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.btnAdministrar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.lblPass);
@@ -130,8 +123,7 @@
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.LinkLabel lnkUsuarios;
+        private System.Windows.Forms.Button btnAdministrar;
     }
 }
 

@@ -9,22 +9,64 @@ namespace Cafeteria
 {
     public class Funciones
     {
+        public static int Agregar_Usuario(Usuario user)
+        {
+            int retorno = 0;
+            MySqlConnection conexion = Conexion.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO usuarios (usuario, pass) values ('{0}','{1}')",
+                user.usuario, user.pass), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+            return retorno;
+        }
+
+        public static int Baja_Usuario(int id_usuario)
+        {
+            int retorno = 0;
+            MySqlConnection conexion = Conexion.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("Delete From usuarios where id_usuario={0}", id_usuario), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+
+            return retorno;
+
+        }
+
         public static Usuario Consulta_Usuario(string usuario, string pass)
         {
             Usuario usuario_login = new Usuario();
             MySqlConnection conexion = Conexion.ObtenerConexion();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT usuario,pass FROM usuarios where (usuario='{0}' and pass='{1}')", usuario, pass), conexion);
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT id_usuario FROM usuarios where (usuario='{0}' and pass='{1}')", usuario, pass), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
 
             while (_reader.Read())
             {
-                usuario_login.usuario = _reader.GetString(0);
-                usuario_login.pass = _reader.GetString(1);
+                usuario_login.id_usuario = _reader.GetInt32(0);
             }
 
             conexion.Close();
             return usuario_login;
+        }
+
+        public static int Modificar_Usuario(Usuario user)
+        {
+            int retorno = 0;
+            MySqlConnection conexion = Conexion.ObtenerConexion();
+
+            MySqlCommand comando = new MySqlCommand(string.Format("UPDATE usuarios SET usuario='{0}', pass='{1}' WHERE id_usuario={2}",
+                user.usuario, user.pass, user.id_usuario), conexion);
+
+            retorno = comando.ExecuteNonQuery();
+            conexion.Close();
+
+            return retorno;
+
+
         }
 
         public static List<Usuario> Reporte_Usuarios()
@@ -47,6 +89,26 @@ namespace Cafeteria
             conexion.Close();
             return _lista;
         }
+
+        public static Usuario Obtener_Usuario(int id_usuario)
+        {
+            Usuario user = new Usuario();
+            MySqlConnection conexion = Conexion.ObtenerConexion();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT id_usuario, usuario, pass FROM usuarios WHERE id_usuario = {0}", id_usuario), conexion);
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                user.id_usuario = _reader.GetInt32(0);
+                user.usuario = _reader.GetString(1);
+                user.pass = _reader.GetString(2);
+            }
+
+            conexion.Close();
+            return user;
+        }
+
+
 
         public static int Agregar_Producto(Materia_Prima mat_prim)
         {
