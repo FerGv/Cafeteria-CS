@@ -41,12 +41,14 @@ namespace Cafeteria
             Usuario usuario_login = new Usuario();
             MySqlConnection conexion = Conexion.ObtenerConexion();
 
-            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT id_usuario FROM usuarios where (usuario='{0}' and pass='{1}')", usuario, pass), conexion);
+            MySqlCommand _comando = new MySqlCommand(String.Format("SELECT id_usuario, usuario, pass FROM usuarios where (usuario='{0}' and pass='{1}')", usuario, pass), conexion);
             MySqlDataReader _reader = _comando.ExecuteReader();
 
             while (_reader.Read())
             {
                 usuario_login.id_usuario = _reader.GetInt32(0);
+                usuario_login.usuario = _reader.GetString(1);
+                usuario_login.pass = _reader.GetString(2);
             }
 
             conexion.Close();
