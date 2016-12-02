@@ -25,7 +25,8 @@ namespace Cafeteria
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            Owner.Show();
+            Login login = new Login();
+            login.Show();
             Close();
         }
 
