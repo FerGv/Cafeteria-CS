@@ -34,6 +34,9 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAdministrar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSalir = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAceptar
@@ -41,9 +44,9 @@
             this.btnAceptar.BackColor = System.Drawing.Color.Brown;
             this.btnAceptar.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAceptar.Location = new System.Drawing.Point(289, 176);
+            this.btnAceptar.Location = new System.Drawing.Point(380, 158);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(133, 44);
+            this.btnAceptar.Size = new System.Drawing.Size(188, 50);
             this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -53,7 +56,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(162, 54);
+            this.lblNombre.Location = new System.Drawing.Point(248, 57);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(81, 21);
             this.lblNombre.TabIndex = 4;
@@ -63,7 +66,7 @@
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(162, 89);
+            this.lblPass.Location = new System.Drawing.Point(248, 104);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(110, 21);
             this.lblPass.TabIndex = 5;
@@ -71,14 +74,14 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(274, 92);
+            this.txtPass.Location = new System.Drawing.Point(399, 104);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(169, 20);
             this.txtPass.TabIndex = 2;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(274, 54);
+            this.txtNombre.Location = new System.Drawing.Point(399, 57);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(169, 20);
             this.txtNombre.TabIndex = 0;
@@ -88,29 +91,55 @@
             this.btnAdministrar.BackColor = System.Drawing.Color.Coral;
             this.btnAdministrar.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdministrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAdministrar.Location = new System.Drawing.Point(12, 188);
+            this.btnAdministrar.Location = new System.Drawing.Point(34, 232);
             this.btnAdministrar.Name = "btnAdministrar";
-            this.btnAdministrar.Size = new System.Drawing.Size(136, 32);
+            this.btnAdministrar.Size = new System.Drawing.Size(157, 47);
             this.btnAdministrar.TabIndex = 6;
             this.btnAdministrar.Text = "Administrar Usuarios";
             this.btnAdministrar.UseVisualStyleBackColor = false;
             this.btnAdministrar.Click += new System.EventHandler(this.btnAdministrar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cafeteria.Properties.Resources.fondo;
+            this.pictureBox1.Location = new System.Drawing.Point(-34, -63);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(335, 378);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Maroon;
+            this.btnSalir.Font = new System.Drawing.Font("Modern No. 20", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSalir.Location = new System.Drawing.Point(468, 257);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(134, 37);
+            this.btnSalir.TabIndex = 8;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Cafeteria.Properties.Resources.fondo;
-            this.ClientSize = new System.Drawing.Size(466, 232);
+            this.ClientSize = new System.Drawing.Size(614, 306);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAdministrar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnAceptar);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,6 +153,8 @@
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnAdministrar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 

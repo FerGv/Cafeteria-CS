@@ -62,13 +62,18 @@ namespace Cafeteria
                         List<Usuario> users = new List<Usuario>();
                         users = Funciones.Reporte_Usuarios();
                         Usuarios user = new Usuarios(users);
-                        user.Show(this);
+                        user.Show();
                         Hide();
                     }
                     else
                         MessageBox.Show("Datos incorrectos");
                 }
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
